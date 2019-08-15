@@ -316,7 +316,7 @@ class GiftedChat extends React.Component {
           messages={this.getMessages()}
           ref={(component) => {
             this._messageContainerRef = component
-            this.props.onRef(component)
+            if (this.props.onRef) this.props.onRef(component)
           }}
         />
         {this.renderChatFooter()}
